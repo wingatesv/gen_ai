@@ -7,7 +7,7 @@ from llama_index.core.node_parser import SentenceSplitter
 import chromadb
 
 
-API_TOKEN = "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"
+API_TOKEN = ""
 EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
 LLM_MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
 COLLECTION_NAME = "doc"
