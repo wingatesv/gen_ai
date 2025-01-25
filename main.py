@@ -123,6 +123,7 @@ class MainWindow(QMainWindow):
         # response = hugging_face_query(user_input)
         response = user_input
         self.chatDisplay.append(f"Model: {response}")
+        # testing 
         
 
 def main():
