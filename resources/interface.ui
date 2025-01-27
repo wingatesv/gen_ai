@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1200</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,18 @@
       <widget class="QWidget" name="rightPanel">
        <layout class="QVBoxLayout" name="rightLayout">
         <item>
-         <widget class="QTextBrowser" name="chatDisplay"/>
+         <widget class="QScrollArea" name="chatScrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="chatContainer">
+           <layout class="QVBoxLayout" name="chatLayout">
+            <property name="alignment">
+             <set>Qt::AlignTop</set>
+            </property>
+           </layout>
+          </widget>
+         </widget>
         </item>
         <item>
          <layout class="QHBoxLayout" name="inputLayout">

@@ -7,9 +7,10 @@ from llama_index.core.node_parser import SentenceSplitter
 import chromadb
 
 
-API_TOKEN = ""
+API_TOKEN = "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"
 EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
-LLM_MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+# LLM_MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+LLM_MODEL = "google/gemma-2-2b-it"
 COLLECTION_NAME = "doc"
 
 def hugging_face_query(prompt):
