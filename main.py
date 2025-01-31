@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import Qt, pyqtSignal, QTimer
 from PyQt5.uic import loadUi
-from llm_query import hugging_face_query
+from llm_query import initialize_rag, hugging_face_query
 
 
 class MainWindow(QMainWindow):
@@ -29,6 +29,15 @@ class MainWindow(QMainWindow):
         self.llm_model = self.config.get("LLM_MODEL", "google/gemma-2-2b-it")
         self.chunk_size = self.config.get("CHUNK_SIZE", 512)
         self.chunk_overlap = self.config.get("CHUNK_OVERLAP", 10)
+
+        # initialize RAG
+        initialize_rag(
+            api_token=self.api_token,
+            embedding_model=self.embedding_model,
+            llm_model=self.llm_model,
+            chunk_size=self.chunk_size,
+            chunk_overlap=self.chunk_overlap
+        )
 
         # Signals and UI setup
         self.response_ready.connect(self.handle_response)
@@ -73,23 +82,42 @@ class MainWindow(QMainWindow):
         self.documentList.addItems(self.uploaded_files)
 
     def upload_pdf(self):
-        """Handle file upload."""
+        """Handle file upload and update the RAG database."""
         files, _ = QFileDialog.getOpenFileNames(self, "Select PDF Documents", "", "PDF Files (*.pdf)")
         if not files:
             return
+
+        new_files = []  # Track new files that are added
 
         for file_path in files:
             file_name = os.path.basename(file_path)
             if file_name in self.uploaded_files:
                 QMessageBox.warning(self, "Duplicate File", f"'{file_name}' is already uploaded.")
-                continue
+                continue  # Skip duplicate files
 
             shutil.copy(file_path, os.path.join(self.internal_folder, file_name))
             self.uploaded_files.append(file_name)
             self.documentList.addItem(file_name)
+            new_files.append(file_name)  # Add to list of new files
 
-        QMessageBox.information(self, "Upload Successful", "PDF(s) uploaded successfully!")
+        if new_files:
+            QMessageBox.information(self, "Upload Successful", "PDF(s) uploaded successfully!")
 
+            # **Update RAG Database After Upload**
+            self.update_rag(new_files)
+
+    def update_rag(self, new_files):
+        """Update the RAG database to include the newly uploaded files."""
+        print(f"Updating RAG with {len(new_files)} new file(s)...")
+        initialize_rag(
+            api_token=self.api_token,
+            embedding_model=self.embedding_model,
+            llm_model=self.llm_model,
+            chunk_size=self.chunk_size,
+            chunk_overlap=self.chunk_overlap
+        )
+        print("RAG update completed!")
+        
     def show_context_menu(self, position):
         """Show context menu for the document list."""
         item = self.documentList.itemAt(position)
@@ -151,7 +179,7 @@ class MainWindow(QMainWindow):
         self.show_dot_animation()
 
         def query_llm():
-            return str(hugging_face_query(user_input, self.api_token, self.embedding_model, self.llm_model, self.chunk_size, self.chunk_overlap))
+            return str(hugging_face_query(user_input))
 
         executor = ThreadPoolExecutor(max_workers=1)
         future = executor.submit(query_llm)
