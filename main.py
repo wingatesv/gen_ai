@@ -2,6 +2,7 @@ import sys
 import os
 import shutil
 import time
+import yaml
 from concurrent.futures import ThreadPoolExecutor
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QLabel, QFileDialog, QMessageBox, QMenu, QWidget, QHBoxLayout, QSizePolicy
@@ -18,6 +19,17 @@ class MainWindow(QMainWindow):
         super().__init__()
         loadUi("resources/interface.ui", self)
 
+        # Load configuration from YAML
+        self.config = self.load_config("config.yaml")
+
+        
+        # Configuration
+        self.api_token = self.config.get("API_TOKEN", "")
+        self.embedding_model = self.config.get("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
+        self.llm_model = self.config.get("LLM_MODEL", "google/gemma-2-2b-it")
+        self.chunk_size = self.config.get("CHUNK_SIZE", 512)
+        self.chunk_overlap = self.config.get("CHUNK_OVERLAP", 10)
+
         # Signals and UI setup
         self.response_ready.connect(self.handle_response)
         self.uploadButton.clicked.connect(self.upload_pdf)
@@ -30,6 +42,20 @@ class MainWindow(QMainWindow):
         self.internal_folder = self._setup_internal_folder("documents")
         self.uploaded_files = []
         self.update_document_list()
+
+    @staticmethod
+    def load_config(config_path):
+        """Load configuration from a YAML file."""
+        if not os.path.exists(config_path):
+            QMessageBox.critical(None, "Configuration Error", f"Missing configuration file: {config_path}")
+            sys.exit(1)
+        
+        try:
+            with open(config_path, "r") as file:
+                return yaml.safe_load(file)
+        except Exception as e:
+            QMessageBox.critical(None, "Configuration Error", f"Failed to read config file:\n{str(e)}")
+            sys.exit(1)
 
     @staticmethod
     def _setup_internal_folder(folder_name):
@@ -125,7 +151,7 @@ class MainWindow(QMainWindow):
         self.show_dot_animation()
 
         def query_llm():
-            return hugging_face_query(user_input)
+            return str(hugging_face_query(user_input, self.api_token, self.embedding_model, self.llm_model, self.chunk_size, self.chunk_overlap))
 
         executor = ThreadPoolExecutor(max_workers=1)
         future = executor.submit(query_llm)

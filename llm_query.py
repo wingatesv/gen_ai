@@ -7,13 +7,13 @@ from llama_index.core.node_parser import SentenceSplitter
 import chromadb
 
 
-API_TOKEN = "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"
-EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
-# LLM_MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
-LLM_MODEL = "google/gemma-2-2b-it"
+# API_TOKEN = "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"
+# EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
+# # LLM_MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+# LLM_MODEL = "google/gemma-2-2b-it"
 COLLECTION_NAME = "doc"
 
-def hugging_face_query(prompt):
+def hugging_face_query(prompt, api_token, embedding_model, llm_model, chunk_size, chunk_overlap):
     try:
         # Initialize Chroma client
         chroma_client = chromadb.Client()
@@ -30,19 +30,19 @@ def hugging_face_query(prompt):
         # Load documents
         documents = SimpleDirectoryReader("documents").load_data()
 
-        text_splitter = SentenceSplitter(chunk_size=512, chunk_overlap=10)
+        text_splitter = SentenceSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         
 
         # Set up Hugging Face embedding model using cloud API
         Settings.embed_model = HuggingFaceInferenceAPIEmbedding(
-            model_name=EMBEDDING_MODEL, 
-            token=API_TOKEN,
+            model_name=embedding_model, 
+            token=api_token,
         )
 
         # Set up Hugging Face LLM via Inference API
         Settings.llm = HuggingFaceInferenceAPI(
-            model_name=LLM_MODEL,
-            token=API_TOKEN,
+            model_name=llm_model,
+            token=api_token,
         )
 
         Settings.chunk_size = 512
