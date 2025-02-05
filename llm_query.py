@@ -1,4 +1,5 @@
 import os
+import logging
 from llama_index.llms.huggingface_api import HuggingFaceInferenceAPI
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings, StorageContext, load_index_from_storage
 from llama_index.embeddings.huggingface_api import HuggingFaceInferenceAPIEmbedding
@@ -6,7 +7,9 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core.node_parser import SentenceSplitter
 import chromadb
 
-
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Constants
 COLLECTION_NAME = "doc"
@@ -16,7 +19,6 @@ DB_PATH = "chroma_db"  # Path to store the ChromaDB database
 chroma_client = None
 vector_store = None
 index = None
-
 
 def initialize_rag(api_token, embedding_model, llm_model, chunk_size, chunk_overlap):
     """Initialize and update the RAG database (ChromaDB) with new documents."""
@@ -54,18 +56,18 @@ def initialize_rag(api_token, embedding_model, llm_model, chunk_size, chunk_over
     Settings.text_splitter = text_splitter
 
     # Check if the index exists
-    index_exists = os.path.exists(DB_PATH) and os.path.isdir(DB_PATH) and os.listdir(DB_PATH)
+    index_exists = os.path.lexists(DB_PATH) and os.path.isdir(DB_PATH) and os.listdir(DB_PATH)
 
     # Load existing index if it exists
     if index_exists:
         try:
-            print("Loading existing index...")
+            logger.info("Loading existing index...")
             index = load_index_from_storage(storage_context)  # Now safe to call
         except ValueError:
-            print("Warning: Index not found in storage, creating a new one...")
+            logger.warning("Index not found in storage, creating a new one...")
             index_exists = False  # Force re-creation
     else:
-        print("Creating a new index...")
+        logger.info("Creating a new index...")
 
     # Load new documents only (incremental update)
     documents = SimpleDirectoryReader("documents").load_data()
@@ -73,13 +75,12 @@ def initialize_rag(api_token, embedding_model, llm_model, chunk_size, chunk_over
     new_docs = [doc for doc in documents if doc.doc_id not in stored_docs]
 
     if new_docs:
-        print(f"Adding {len(new_docs)} new document(s) to the database...")
+        logger.info(f"Adding {len(new_docs)} new document(s) to the database...")
         index = VectorStoreIndex.from_documents(new_docs, storage_context=storage_context, transformations=[text_splitter])
         index.storage_context.persist(DB_PATH)  # Persist the updated database
-        print("Index updated with new documents.")
+        logger.info("Index updated with new documents.")
     else:
-        print("No new documents detected. Skipping update.")
-
+        logger.info("No new documents detected. Skipping update.")
 
 def hugging_face_query(prompt):
     """Query the preloaded RAG index instead of rebuilding it."""
@@ -95,5 +96,3 @@ if __name__ == "__main__":
     # Test prompt
     prompt = "What is product marketing mix?"
     hugging_face_query(prompt)
-
-  
