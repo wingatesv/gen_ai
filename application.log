@@ -2544,3 +2544,1209 @@ Traceback (most recent call last):
     ...<5 lines>...
     )
 aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:23,148 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-05 13:43:23,354 - INFO - Loading existing index...
+2025-02-05 13:43:23,354 - INFO - Loading all indices.
+2025-02-05 13:43:23,354 - WARNING - Index not found in storage, creating a new one...
+2025-02-05 13:43:23,859 - INFO - Adding 3 new document(s) to the database...
+2025-02-05 13:43:26,170 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2113', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': '9r8Ois', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:26,170 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2917', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': '4fT_ra', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:26,171 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2652', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': '036VWN', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:26,171 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3276', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': '5lKvnA', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:26,172 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3356', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'K-A8Jb', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:26,172 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2427', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'ZCWfcK', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:26,173 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3119', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'CZ3U2v', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:26,173 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '1894', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'CSDzNl', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 13:43:26,173 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2172', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 05:43:25 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'DGFw4S', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:55,384 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-05 17:31:55,591 - INFO - Loading existing index...
+2025-02-05 17:31:55,591 - INFO - Loading all indices.
+2025-02-05 17:31:55,591 - WARNING - Index not found in storage, creating a new one...
+2025-02-05 17:31:56,122 - INFO - Adding 3 new document(s) to the database...
+2025-02-05 17:31:58,078 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2113', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'EhnSZ7', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:58,079 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2917', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'TApsJQ', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:58,079 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2652', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': '4PbAxA', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:58,080 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3276', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'q3MjgO', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:58,080 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3356', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'WxDTNP', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:58,081 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2427', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'nGn1xs', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:58,081 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3119', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'vE0JTK', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:58,081 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '1894', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'mURS-j', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:31:58,082 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer ', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2172', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=401, message='Unauthorized', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:31:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '28', 'Connection': 'keep-alive', 'x-request-id': 'plpKtG', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 401, message='Unauthorized', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:08,120 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-05 17:32:08,300 - INFO - Loading existing index...
+2025-02-05 17:32:08,300 - INFO - Loading all indices.
+2025-02-05 17:32:08,300 - WARNING - Index not found in storage, creating a new one...
+2025-02-05 17:32:08,698 - INFO - Adding 3 new document(s) to the database...
+2025-02-05 17:32:10,467 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2113', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'mLt-xu', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:10,468 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2917', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'OW1XGk', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:10,468 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2652', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'GgEbUU', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:10,469 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3276', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:10 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'MwfkeE', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:10,469 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3356', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'vGzAWx', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:10,469 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2427', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'hvMShQ', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:10,470 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3119', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'mLD4RE', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:10,470 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '1894', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'zyeMMI', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:32:10,471 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2172', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:32:09 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'O_OOh7', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:32,232 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-05 17:33:32,437 - INFO - Loading existing index...
+2025-02-05 17:33:32,437 - INFO - Loading all indices.
+2025-02-05 17:33:32,437 - WARNING - Index not found in storage, creating a new one...
+2025-02-05 17:33:32,912 - INFO - Adding 3 new document(s) to the database...
+2025-02-05 17:33:34,303 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2113', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'lnZj9O', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:34,304 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2917', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'sEmgZm', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:34,305 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2652', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'EuBL-g', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:34,305 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3276', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'nlNplK', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:34,305 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3356', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'Zy3-lR', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:34,306 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2427', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'FTYtI8', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:34,306 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3119', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'TygCEe', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:34,307 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '1894', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'Kt29yV', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:34,307 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2172', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:34 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'rt1wYP', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:52,638 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-05 17:33:52,813 - INFO - Loading existing index...
+2025-02-05 17:33:52,813 - INFO - Loading all indices.
+2025-02-05 17:33:52,813 - WARNING - Index not found in storage, creating a new one...
+2025-02-05 17:33:53,029 - INFO - Adding 3 new document(s) to the database...
+2025-02-05 17:33:54,487 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2113', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'kpEY6c', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:54,488 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2917', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'yzsLDH', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:54,489 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2652', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'Vorwc0', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:54,489 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3276', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'XoaqlL', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:54,489 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3356', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': '2-PBet', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:54,490 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2427', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': '_OT0dx', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:54,490 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3119', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'l4rt9D', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:54,491 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '1894', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'aVDLId', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-05 17:33:54,491 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2172', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5')), (), status=429, message='Too Many Requests', headers=<CIMultiDictProxy('Date': 'Wed, 05 Feb 2025 09:33:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '179', 'Connection': 'keep-alive', 'x-request-id': 'T43PHH', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://api-inference.huggingface.co/pipeline/feature-extraction/BAAI/bge-small-en-v1.5'
+2025-02-06 11:17:48,811 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 11:17:49,013 - INFO - Loading existing index...
+2025-02-06 11:17:49,013 - INFO - Loading all indices.
+2025-02-06 11:17:49,013 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 11:17:49,544 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 11:17:56,370 - INFO - Index updated with new documents.
+2025-02-06 11:34:46,052 - INFO - Uploaded new files: ['nov_2024_statement.pdf', 'oct_2024_statement.pdf']
+2025-02-06 12:24:27,243 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_122427.json
+2025-02-06 12:24:43,056 - ERROR - Error loading stylesheet: [Errno 2] No such file or directory: 'resources/light_mode.qss'
+2025-02-06 12:24:43,095 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 12:24:43,299 - INFO - Loading existing index...
+2025-02-06 12:24:43,299 - INFO - Loading all indices.
+2025-02-06 12:24:43,299 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 12:24:43,844 - INFO - Adding 8 new document(s) to the database...
+2025-02-06 12:25:14,017 - INFO - Index updated with new documents.
+2025-02-06 12:25:16,745 - INFO - Chat session is empty, nothing to save.
+2025-02-06 12:25:30,711 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 12:25:30,904 - INFO - Loading existing index...
+2025-02-06 12:25:30,905 - INFO - Loading all indices.
+2025-02-06 12:25:30,905 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 12:25:31,334 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 12:25:36,262 - INFO - Index updated with new documents.
+2025-02-06 12:25:54,481 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250205_125724.json
+2025-02-06 12:29:15,625 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 12:29:15,824 - INFO - Loading existing index...
+2025-02-06 12:29:15,824 - INFO - Loading all indices.
+2025-02-06 12:29:15,824 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 12:29:16,318 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 12:29:23,695 - INFO - Index updated with new documents.
+2025-02-06 12:29:39,078 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_122939.json
+2025-02-06 12:30:07,763 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 12:30:07,963 - INFO - Loading existing index...
+2025-02-06 12:30:07,963 - INFO - Loading all indices.
+2025-02-06 12:30:07,963 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 12:30:08,459 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 12:30:13,568 - INFO - Index updated with new documents.
+2025-02-06 12:37:30,171 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250205_125724.json
+2025-02-06 12:37:35,047 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 12:37:35,239 - INFO - Loading existing index...
+2025-02-06 12:37:35,240 - INFO - Loading all indices.
+2025-02-06 12:37:35,240 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 12:37:35,546 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 12:37:40,441 - INFO - Index updated with new documents.
+2025-02-06 12:38:07,204 - INFO - Chat space populated. Saving current session and creating a new chat session.
+2025-02-06 12:38:07,206 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_123807.json
+2025-02-06 12:38:14,348 - ERROR - Error loading chat session chat_20250206_123807.json.json: [Errno 2] No such file or directory: '/Users/wingatesv/gen_ai/chat_histories/chat_20250206_123807.json.json'
+2025-02-06 12:38:17,690 - INFO - Chat session is empty, nothing to save.
+2025-02-06 12:41:39,004 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 12:41:39,210 - INFO - Loading existing index...
+2025-02-06 12:41:39,211 - INFO - Loading all indices.
+2025-02-06 12:41:39,211 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 12:41:39,717 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 12:41:44,483 - INFO - Index updated with new documents.
+2025-02-06 12:41:50,002 - INFO - Chat space populated. Saving current session and creating a new chat session.
+2025-02-06 12:41:50,004 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_124150.json
+2025-02-06 12:41:59,127 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_124150.json

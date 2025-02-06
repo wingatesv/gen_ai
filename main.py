@@ -63,6 +63,7 @@ class MainWindow(QMainWindow):
         self.llm_model = self.config.get("LLM_MODEL", "google/gemma-2-2b-it")
         self.chunk_size = self.config.get("CHUNK_SIZE", 512)
         self.chunk_overlap = self.config.get("CHUNK_OVERLAP", 10)
+        self.interface_mode = self.config.get("INTERFACE_MODE", "DARK").upper()
 
         # Initialize RAG
         logging.debug("Initializing RAG")
@@ -188,7 +189,7 @@ class MainWindow(QMainWindow):
             self.run_initialize_rag(new_files)
 
     def run_initialize_rag(self, new_files):
-        logging.debug(f"Updating RAG with {len(new_files)} new file(s)")
+        # logging.debug(f"Updating RAG with {len(new_files)} new file(s)")
         # self.worker = RAGWorker(
         #     api_token=self.api_token,
         #     embedding_model=self.embedding_model,
@@ -327,12 +328,19 @@ class MainWindow(QMainWindow):
             width = min(text_width + 20, max_width)
             label.setFixedWidth(width)
 
-            # Apply styling based on sender
+            # Apply styling based on sender and interface mode
+            if self.interface_mode == "DARK":
+                user_color = "#228B22"
+                model_color = "#191970"
+            else:
+                user_color = "#adf0ad"
+                model_color = "#99b2f0"
+
             if sender == "user":
-                label.setStyleSheet("background-color: #228B22; border-radius: 10px; padding: 10px;")
+                label.setStyleSheet(f"background-color: {user_color}; border-radius: 10px; padding: 10px;")
                 alignment = Qt.AlignRight
             else:
-                label.setStyleSheet("background-color: #191970; border-radius: 10px; padding: 10px;")
+                label.setStyleSheet(f"background-color: {model_color}; border-radius: 10px; padding: 10px;")
                 alignment = Qt.AlignLeft
         else:
             # If a widget is passed in, assume it's a QLabel or similar.
@@ -391,7 +399,9 @@ class MainWindow(QMainWindow):
             session_file_name = os.path.basename(session_path)
             existing_items = [self.chatHistoryList.item(i).text() for i in range(self.chatHistoryList.count())]
             if session_file_name not in existing_items:
-                self.chatHistoryList.addItem(session_file_name)
+                file_name, ext = os.path.splitext(session_file_name)
+                self.chatHistoryList.addItem(file_name)
+                
         except Exception as e:
             logging.error(f"Error saving chat session: {e}")
             QMessageBox.critical(self, "Save Error", f"Could not save chat session:\n{str(e)}")
@@ -469,8 +479,20 @@ def load_stylesheet(file_path):
 
 def main():
     logging.debug("Starting application")
+
+    # Load configuration
+    with open("config.yaml", "r") as config_file:
+        config = yaml.safe_load(config_file)
+    
+    # Determine the interface mode
+    interface_mode = config.get("INTERFACE_MODE", "DARK").upper()
+    if interface_mode == "LIGHT":
+        stylesheet_path = "resources/light_mode.qss"
+    else:
+        stylesheet_path = "resources/dark_mode.qss"
+
     app = QApplication(sys.argv)
-    stylesheet = load_stylesheet("resources/dark_mode.qss")
+    stylesheet = load_stylesheet(stylesheet_path)
     app.setStyleSheet(stylesheet)
 
     window = MainWindow()

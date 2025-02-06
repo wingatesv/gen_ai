@@ -20,17 +20,17 @@ pip install docx2txt
 features:
 	1.	Add a Document Viewer - done
 	•	Instead of just listing uploaded PDFs, allow users to preview them directly in the interface using a QTextBrowser or embedded PDF viewer.
-	2.	Chat History Management
+	2.	Chat History Management - done
 	•	Include a dropdown or list widget for previous conversations to allow users to revisit past interactions.
-	3.	Resizable Panels
+	3.	Resizable Panels - done
 	•	Ensure the QSplitter allows users to adjust the size of the left and right panels dynamically.
-	4.	File Drag & Drop Support
+	4.	File Drag & Drop Support - done
 	•	Enhance usability by allowing users to drag and drop PDFs into the upload area.
     	Search within Documents
 	•	Add a search bar in the left panel to filter and locate specific documents easily.
-	2.	Multi-file Upload
+	2.	Multi-file Upload - done
 	•	Allow users to upload multiple PDFs at once and maintain them in a document collection.
-	3.	RAG-Specific Features
+	3.	RAG-Specific Features - wait
 	•	Include an option to select a retrieval method (e.g., BM25, Vector Search, Hybrid) before querying the documents.
 	4.	Contextual Querying
 	•	Allow users to choose whether their query should search:
@@ -44,11 +44,11 @@ features:
 	•	Cited Source Highlights
 	6.	Export Responses
 	•	Provide an option to export chat history or AI-generated answers to PDF or text.
-	7.	Model Settings Panel
+	7.	Model Settings Panel - now use config.yaml
 	•	Add a settings menu where users can:
 	•	Select different LLM models (e.g., GPT-4, Mistral, Llama)
 	•	Adjust temperature and max token settings
-	8.	Dark Mode & Theme Support
+	8.	Dark Mode & Theme Support - DONE
 	•	Include a toggle for switching between light and dark themes.
 
 For an LLM + RAG application, the core features should focus on efficient document retrieval, seamless AI interactions, and a user-friendly interface. Below are the key features grouped into essential categories:
