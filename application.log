@@ -3750,3 +3750,827 @@ aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests',
 2025-02-06 12:41:50,002 - INFO - Chat space populated. Saving current session and creating a new chat session.
 2025-02-06 12:41:50,004 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_124150.json
 2025-02-06 12:41:59,127 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_124150.json
+2025-02-06 13:26:20,987 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 13:26:21,187 - INFO - Loading existing index...
+2025-02-06 13:26:21,187 - INFO - Loading all indices.
+2025-02-06 13:26:21,187 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 13:26:21,678 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 13:26:45,054 - INFO - Index updated with new documents.
+2025-02-06 13:48:45,951 - INFO - Chat session is empty, nothing to save.
+2025-02-06 13:48:49,675 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 13:48:49,866 - INFO - Loading existing index...
+2025-02-06 13:48:49,866 - INFO - Loading all indices.
+2025-02-06 13:48:49,866 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 13:48:50,163 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 13:48:54,990 - INFO - Index updated with new documents.
+2025-02-06 13:49:29,069 - INFO - Chat session is empty, nothing to save.
+2025-02-06 13:49:40,920 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 13:49:41,112 - INFO - Loading existing index...
+2025-02-06 13:49:41,112 - INFO - Loading all indices.
+2025-02-06 13:49:41,112 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 13:49:41,469 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 13:49:46,110 - INFO - Index updated with new documents.
+2025-02-06 13:58:49,749 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_135849.json
+2025-02-06 13:58:53,317 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 13:58:53,526 - INFO - Loading existing index...
+2025-02-06 13:58:53,526 - INFO - Loading all indices.
+2025-02-06 13:58:53,526 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 13:58:53,849 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 13:59:04,521 - INFO - Index updated with new documents.
+2025-02-06 14:05:16,585 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_140516.json
+2025-02-06 14:05:20,892 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 14:05:21,086 - INFO - Loading existing index...
+2025-02-06 14:05:21,086 - INFO - Loading all indices.
+2025-02-06 14:05:21,086 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 14:05:21,399 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 14:05:26,410 - INFO - Index updated with new documents.
+2025-02-06 16:57:46,483 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_165746.json
+2025-02-06 16:57:50,358 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 16:57:50,559 - INFO - Loading existing index...
+2025-02-06 16:57:50,559 - INFO - Loading all indices.
+2025-02-06 16:57:50,559 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 16:57:50,912 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 16:58:15,575 - INFO - Index updated with new documents.
+2025-02-06 16:59:36,599 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_140516.json
+2025-02-06 16:59:47,680 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-06 16:59:47,868 - INFO - Loading existing index...
+2025-02-06 16:59:47,868 - INFO - Loading all indices.
+2025-02-06 16:59:47,868 - WARNING - Index not found in storage, creating a new one...
+2025-02-06 16:59:48,158 - INFO - Adding 3 new document(s) to the database...
+2025-02-06 17:00:10,592 - INFO - Index updated with new documents.
+2025-02-06 17:13:43,253 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_140516.json
+2025-02-10 11:09:43,213 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 11:09:43,432 - INFO - Loading existing index...
+2025-02-10 11:09:43,433 - INFO - Loading all indices.
+2025-02-10 11:09:43,433 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 11:09:44,222 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 11:11:41,935 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 11:11:42,112 - INFO - Loading existing index...
+2025-02-10 11:11:42,113 - INFO - Loading all indices.
+2025-02-10 11:11:42,113 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 11:11:42,342 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 11:12:01,664 - INFO - Index updated with new documents.
+2025-02-10 11:12:26,994 - INFO - Chat space populated. Saving current session and creating a new chat session.
+2025-02-10 11:12:26,996 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_165746.json
+2025-02-10 11:26:48,486 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 11:26:52,353 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 11:26:52,545 - INFO - Loading existing index...
+2025-02-10 11:26:52,545 - INFO - Loading all indices.
+2025-02-10 11:26:52,545 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 11:26:52,972 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 11:26:57,917 - INFO - Index updated with new documents.
+2025-02-10 11:27:31,444 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 11:30:15,237 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 11:30:15,413 - INFO - Loading existing index...
+2025-02-10 11:30:15,413 - INFO - Loading all indices.
+2025-02-10 11:30:15,413 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 11:30:15,641 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 11:30:17,253 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientConnectorDNSError(ConnectionKey(host='api-inference.huggingface.co', port=443, is_ssl=True, ssl=True, proxy=None, proxy_auth=None, proxy_headers_hash=None), gaierror(8, 'nodename nor servname provided, or not known'))>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/connector.py", line 1351, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/asyncio/base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 294, in post
+    response = await session.post(url, json=json, data=data_as_binary, proxy=self.proxies)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 3067, in _request
+    response = await session._wrapped_request(method, url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/connector.py", line 1357, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host api-inference.huggingface.co:443 ssl:default [nodename nor servname provided, or not known]
+2025-02-10 11:30:51,087 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 11:30:51,261 - INFO - Loading existing index...
+2025-02-10 11:30:51,261 - INFO - Loading all indices.
+2025-02-10 11:30:51,261 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 11:30:51,490 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 11:30:56,088 - INFO - Index updated with new documents.
+2025-02-10 11:56:47,571 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 11:56:51,309 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 11:56:51,501 - INFO - Loading existing index...
+2025-02-10 11:56:51,501 - INFO - Loading all indices.
+2025-02-10 11:56:51,501 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 11:56:51,992 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 11:56:57,055 - INFO - Index updated with new documents.
+2025-02-10 11:58:16,201 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_140516.json
+2025-02-10 11:58:38,947 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 11:58:39,136 - INFO - Loading existing index...
+2025-02-10 11:58:39,136 - INFO - Loading all indices.
+2025-02-10 11:58:39,136 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 11:58:39,589 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 11:58:44,400 - INFO - Index updated with new documents.
+2025-02-10 11:58:49,519 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_165746.json
+2025-02-10 11:58:57,839 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 11:58:58,014 - INFO - Loading existing index...
+2025-02-10 11:58:58,014 - INFO - Loading all indices.
+2025-02-10 11:58:58,014 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 11:58:58,250 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 11:59:03,774 - INFO - Index updated with new documents.
+2025-02-10 12:01:03,933 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_140516.json
+2025-02-10 12:01:26,468 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:01:26,657 - INFO - Loading existing index...
+2025-02-10 12:01:26,657 - INFO - Loading all indices.
+2025-02-10 12:01:26,657 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:01:27,129 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:01:32,405 - INFO - Index updated with new documents.
+2025-02-10 12:02:26,183 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_120226.json
+2025-02-10 12:02:39,773 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:02:39,957 - INFO - Loading existing index...
+2025-02-10 12:02:39,957 - INFO - Loading all indices.
+2025-02-10 12:02:39,957 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:02:40,203 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:02:45,295 - INFO - Index updated with new documents.
+2025-02-10 12:03:17,215 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250206_140516.json
+2025-02-10 12:03:25,111 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:03:25,290 - INFO - Loading existing index...
+2025-02-10 12:03:25,290 - INFO - Loading all indices.
+2025-02-10 12:03:25,290 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:03:25,528 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:03:30,985 - INFO - Index updated with new documents.
+2025-02-10 12:11:32,934 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 12:11:36,514 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:11:36,704 - INFO - Loading existing index...
+2025-02-10 12:11:36,704 - INFO - Loading all indices.
+2025-02-10 12:11:36,704 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:11:37,121 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:11:41,885 - INFO - Index updated with new documents.
+2025-02-10 12:19:30,331 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 12:19:33,912 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:19:34,103 - INFO - Loading existing index...
+2025-02-10 12:19:34,103 - INFO - Loading all indices.
+2025-02-10 12:19:34,103 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:19:34,519 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:19:39,234 - INFO - Index updated with new documents.
+2025-02-10 12:20:24,582 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 12:20:28,505 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:20:28,694 - INFO - Loading existing index...
+2025-02-10 12:20:28,694 - INFO - Loading all indices.
+2025-02-10 12:20:28,694 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:20:29,044 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:20:33,700 - INFO - Index updated with new documents.
+2025-02-10 12:21:17,626 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 12:21:25,701 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:21:25,889 - INFO - Loading existing index...
+2025-02-10 12:21:25,889 - INFO - Loading all indices.
+2025-02-10 12:21:25,889 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:21:26,245 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:21:30,868 - INFO - Index updated with new documents.
+2025-02-10 12:21:57,314 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 12:28:03,240 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:28:03,441 - INFO - Loading existing index...
+2025-02-10 12:28:03,441 - INFO - Loading all indices.
+2025-02-10 12:28:03,441 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:28:04,010 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:28:09,145 - INFO - Index updated with new documents.
+2025-02-10 12:38:15,449 - INFO - Chat session is empty, nothing to save.
+2025-02-10 12:39:57,508 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:39:57,699 - INFO - Loading existing index...
+2025-02-10 12:39:57,700 - INFO - Loading all indices.
+2025-02-10 12:39:57,700 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:39:58,193 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:40:03,955 - INFO - Index updated with new documents.
+2025-02-10 12:40:51,830 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 12:40:54,585 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:40:54,775 - INFO - Loading existing index...
+2025-02-10 12:40:54,775 - INFO - Loading all indices.
+2025-02-10 12:40:54,775 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:40:55,131 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:40:59,782 - INFO - Index updated with new documents.
+2025-02-10 12:51:48,103 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250210_112648.json
+2025-02-10 12:51:51,439 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-10 12:51:51,629 - INFO - Loading existing index...
+2025-02-10 12:51:51,629 - INFO - Loading all indices.
+2025-02-10 12:51:51,629 - WARNING - Index not found in storage, creating a new one...
+2025-02-10 12:51:52,077 - INFO - Adding 3 new document(s) to the database...
+2025-02-10 12:51:57,166 - INFO - Index updated with new documents.
+2025-02-10 12:52:15,056 - INFO - Chat session is empty, nothing to save.
+2025-02-11 10:42:48,329 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 10:42:48,549 - INFO - Loading existing index...
+2025-02-11 10:42:48,549 - INFO - Loading all indices.
+2025-02-11 10:42:48,549 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 10:42:49,389 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 10:43:09,933 - INFO - Index updated with new documents.
+2025-02-11 10:46:15,538 - INFO - Chat session is empty, nothing to save.
+2025-02-11 10:46:19,484 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 10:46:19,660 - INFO - Loading existing index...
+2025-02-11 10:46:19,660 - INFO - Loading all indices.
+2025-02-11 10:46:19,660 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 10:46:19,905 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 10:46:24,549 - INFO - Index updated with new documents.
+2025-02-11 10:47:12,635 - INFO - Settings saved and applied.
+2025-02-11 10:58:08,830 - INFO - Chat session is empty, nothing to save.
+2025-02-11 10:58:12,042 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 10:58:12,216 - INFO - Loading existing index...
+2025-02-11 10:58:12,216 - INFO - Loading all indices.
+2025-02-11 10:58:12,216 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 10:58:12,461 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 10:58:14,083 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2113', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'sHQeUr', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:14,084 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2917', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'Dz8tMx', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:14,085 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2652', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'hE3G3c', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:14,085 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3276', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'MBHetJ', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:14,086 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3356', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'eDDUjr', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:14,086 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2427', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': '7uM1Tw', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:14,087 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3119', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'HR9pGt', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:14,087 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '1894', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'iSOspN', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:14,087 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2172', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:13 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'YLOYV9', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:19,781 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 10:58:19,958 - INFO - Loading existing index...
+2025-02-11 10:58:19,958 - INFO - Loading all indices.
+2025-02-11 10:58:19,958 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 10:58:20,203 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 10:58:21,611 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2113', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'zMb5eP', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:21,612 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2917', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'woc9H2', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:21,612 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2652', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'P3G2Lb', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:21,613 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3276', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'GiXo4C', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:21,613 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3356', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'u8W4Zl', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:21,613 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2427', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': '0HX5c9', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:21,614 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '3119', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'Lk5k2h', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:21,614 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '1894', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': 'fwpjdg', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:58:21,615 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HuggingFaceInferenceAPIEmbedding._aget_text_embedding() done, defined at /Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py:206> exception=ClientResponseError(RequestInfo(url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'), method='POST', headers=<CIMultiDictProxy('Host': 'api-inference.huggingface.co', 'user-agent': 'unknown/None; hf_hub/0.27.1; python/3.13.1', 'authorization': 'Bearer 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', 'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '2172', 'Content-Type': 'application/json')>, real_url=URL('https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding')), (), status=404, message='Not Found', headers=<CIMultiDictProxy('Date': 'Tue, 11 Feb 2025 02:58:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '38', 'Connection': 'keep-alive', 'x-request-id': '02H04v', 'Vary': 'origin, access-control-request-method, access-control-request-headers', 'Access-Control-Allow-Credentials': 'true')>)>
+Traceback (most recent call last):
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 207, in _aget_text_embedding
+    return await self._async_embed_single(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        text=format_text(text, self.model_name, self.text_instruction)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/llama_index/embeddings/huggingface_api/base.py", line 146, in _async_embed_single
+    embedding = await self._async_client.feature_extraction(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 1110, in feature_extraction
+    response = await self.post(**payload, model=model, task="feature-extraction")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 334, in post
+    raise error
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/huggingface_hub/inference/_generated/_async_client.py", line 301, in post
+    response.raise_for_status()
+  File "/Users/wingatesv/anaconda3/envs/genai/lib/python3.13/site-packages/aiohttp/client_reqrep.py", line 1161, in raise_for_status
+    raise ClientResponseError(
+    ...<5 lines>...
+    )
+aiohttp.client_exceptions.ClientResponseError: 404, message='Not Found', url='https://api-inference.huggingface.co/pipeline/feature-extraction/OpenAI%20Embedding'
+2025-02-11 10:59:07,014 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 10:59:07,189 - INFO - Loading existing index...
+2025-02-11 10:59:07,189 - INFO - Loading all indices.
+2025-02-11 10:59:07,189 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 10:59:07,433 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 10:59:12,625 - INFO - Index updated with new documents.
+2025-02-11 11:00:06,352 - INFO - Chat session is empty, nothing to save.
+2025-02-11 15:09:41,563 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:09:41,759 - INFO - Loading existing index...
+2025-02-11 15:09:41,759 - INFO - Loading all indices.
+2025-02-11 15:09:41,759 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:09:42,368 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:09:52,423 - INFO - Index updated with new documents.
+2025-02-11 15:19:13,845 - INFO - Chat session is empty, nothing to save.
+2025-02-11 15:19:30,927 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:19:31,116 - INFO - Loading existing index...
+2025-02-11 15:19:31,116 - INFO - Loading all indices.
+2025-02-11 15:19:31,116 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:19:31,682 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:19:38,944 - INFO - Index updated with new documents.
+2025-02-11 15:22:01,415 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:22:01,602 - INFO - Loading existing index...
+2025-02-11 15:22:01,602 - INFO - Loading all indices.
+2025-02-11 15:22:01,603 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:22:02,106 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:22:11,748 - INFO - Index updated with new documents.
+2025-02-11 15:23:18,461 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:23:18,639 - INFO - Loading existing index...
+2025-02-11 15:23:18,639 - INFO - Loading all indices.
+2025-02-11 15:23:18,639 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:23:19,092 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:23:25,249 - INFO - Index updated with new documents.
+2025-02-11 15:23:51,469 - INFO - Chat session is empty, nothing to save.
+2025-02-11 15:27:38,025 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:27:38,201 - INFO - Loading existing index...
+2025-02-11 15:27:38,202 - INFO - Loading all indices.
+2025-02-11 15:27:38,202 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:27:38,723 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:27:44,167 - INFO - Index updated with new documents.
+2025-02-11 15:28:49,535 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:28:49,718 - INFO - Loading existing index...
+2025-02-11 15:28:49,718 - INFO - Loading all indices.
+2025-02-11 15:28:49,718 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:28:50,236 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:28:56,353 - INFO - Index updated with new documents.
+2025-02-11 15:29:00,863 - INFO - Settings saved and applied.
+2025-02-11 15:29:18,221 - INFO - Chat session is empty, nothing to save.
+2025-02-11 15:29:22,787 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:29:22,964 - INFO - Loading existing index...
+2025-02-11 15:29:22,964 - INFO - Loading all indices.
+2025-02-11 15:29:22,964 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:29:23,449 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:29:29,141 - INFO - Index updated with new documents.
+2025-02-11 15:29:38,910 - INFO - Chat session is empty, nothing to save.
+2025-02-11 15:30:13,887 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:30:14,067 - INFO - Loading existing index...
+2025-02-11 15:30:14,068 - INFO - Loading all indices.
+2025-02-11 15:30:14,068 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:30:14,548 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:30:20,710 - INFO - Index updated with new documents.
+2025-02-11 15:30:27,832 - INFO - Settings saved and applied.
+2025-02-11 15:30:30,336 - INFO - Chat session is empty, nothing to save.
+2025-02-11 15:30:33,371 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:30:33,552 - INFO - Loading existing index...
+2025-02-11 15:30:33,552 - INFO - Loading all indices.
+2025-02-11 15:30:33,552 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:30:34,071 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:30:40,331 - INFO - Index updated with new documents.
+2025-02-11 15:31:08,567 - INFO - Chat session is empty, nothing to save.
+2025-02-11 15:38:22,390 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:38:22,587 - INFO - Loading existing index...
+2025-02-11 15:38:22,587 - INFO - Loading all indices.
+2025-02-11 15:38:22,587 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:38:23,185 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:38:29,741 - INFO - Index updated with new documents.
+2025-02-11 15:40:00,558 - INFO - Settings saved and applied.
+2025-02-11 15:40:04,360 - INFO - Chat session is empty, nothing to save.
+2025-02-11 15:43:50,077 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:43:50,253 - INFO - Loading existing index...
+2025-02-11 15:43:50,253 - INFO - Loading all indices.
+2025-02-11 15:43:50,253 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:43:50,515 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:43:56,834 - INFO - Index updated with new documents.
+2025-02-11 15:45:13,588 - INFO - Settings saved and applied.
+2025-02-11 15:45:25,614 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250211_154525.json
+2025-02-11 15:48:14,641 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:48:14,816 - INFO - Loading existing index...
+2025-02-11 15:48:14,816 - INFO - Loading all indices.
+2025-02-11 15:48:14,816 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:48:15,139 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:48:23,914 - INFO - Index updated with new documents.
+2025-02-11 15:48:50,302 - INFO - Settings saved and applied.
+2025-02-11 15:48:54,640 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250211_154854.json
+2025-02-11 15:53:07,959 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-02-11 15:53:08,135 - INFO - Loading existing index...
+2025-02-11 15:53:08,135 - INFO - Loading all indices.
+2025-02-11 15:53:08,135 - WARNING - Index not found in storage, creating a new one...
+2025-02-11 15:53:08,561 - INFO - Adding 3 new document(s) to the database...
+2025-02-11 15:53:17,415 - INFO - Index updated with new documents.
+2025-02-11 15:55:34,854 - INFO - Chat session saved as /Users/wingatesv/gen_ai/chat_histories/chat_20250211_154854.json

@@ -1,3 +1,9 @@
+/* Global Font Settings */
+* {
+    font-family: "DejaVu Sans", Arial, sans-serif;
+    font-size: 16pt;
+}
+
 /* General Widget Styling */
 QWidget {
     background-color: #121212;

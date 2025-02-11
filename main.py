@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import Qt, pyqtSignal, QTimer, QThread
 from PyQt5.uic import loadUi
 from llm_query import initialize_rag, hugging_face_query
+from settings import SettingsWindow
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -95,11 +96,15 @@ class MainWindow(QMainWindow):
 
         # Chat management panel
         self.current_session_file = None  # Track the currently loaded/saved chat session file
+        self.chat_history_dir = os.path.join(os.getcwd(), "chat_histories")
         self.chatHistoryList.itemClicked.connect(self.load_chat_session)
         self.load_existing_chat_sessions()
 
         # Connect the new chat button (with '+' symbol) to create a new session.
         self.newChatButton.clicked.connect(self.new_chat_session)
+
+        # Connect the settings button
+        self.settingsButton.clicked.connect(self.open_settings_window)
 
     @staticmethod
     def load_config(config_path):
@@ -189,17 +194,17 @@ class MainWindow(QMainWindow):
             self.run_initialize_rag(new_files)
 
     def run_initialize_rag(self, new_files):
-        # logging.debug(f"Updating RAG with {len(new_files)} new file(s)")
-        # self.worker = RAGWorker(
-        #     api_token=self.api_token,
-        #     embedding_model=self.embedding_model,
-        #     llm_model=self.llm_model,
-        #     chunk_size=self.chunk_size,
-        #     chunk_overlap=self.chunk_overlap
-        # )
-        # self.worker.finished.connect(self.on_rag_finished)
-        # self.worker.error.connect(self.on_rag_error)
-        # self.worker.start()
+        logging.debug(f"Updating RAG with {len(new_files)} new file(s)")
+        self.worker = RAGWorker(
+            api_token=self.api_token,
+            embedding_model=self.embedding_model,
+            llm_model=self.llm_model,
+            chunk_size=self.chunk_size,
+            chunk_overlap=self.chunk_overlap
+        )
+        self.worker.finished.connect(self.on_rag_finished)
+        self.worker.error.connect(self.on_rag_error)
+        self.worker.start()
         logging.debug("RAG update started")
         QMessageBox.information(self, "RAG Update", "Updating RAG database in the background.")
 
@@ -262,7 +267,11 @@ class MainWindow(QMainWindow):
         """Show a loading animation while waiting for the response."""
         logging.debug("Showing dot animation")
         self.dot_label = QLabel("Loading")
-        self.dot_label.setStyleSheet("background-color: #191970; border-radius: 10px; padding: 10px;")
+        if self.interface_mode == "DARK":
+            self.dot_label.setStyleSheet("background-color: #121212; border-radius: 10px; padding: 10px;")
+        else:
+            self.dot_label.setStyleSheet("background-color: white; border-radius: 10px; padding: 10px;")
+            
         self.add_message(self.dot_label, sender="model")
 
         self.dot_timer = QTimer(self)
@@ -297,8 +306,8 @@ class MainWindow(QMainWindow):
         self.show_dot_animation()
 
         def query_llm():
-            # return str(hugging_face_query(user_input))
-            return user_input
+            return str(hugging_face_query(user_input))
+            # return user_input
 
         executor = ThreadPoolExecutor(max_workers=1)
         future = executor.submit(query_llm)
@@ -317,24 +326,37 @@ class MainWindow(QMainWindow):
             # Create a QLabel for text and store the sender info.
             label = QLabel(text_or_widget)
             label.setWordWrap(True)
-            label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
-            # Set the sender property
+            label.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
             label.setProperty("sender", sender)
 
-            # Dynamically adjust the label's width based on text
+            # Use QFontMetrics to compute the width of the text.
             font_metrics = label.fontMetrics()
             text_width = font_metrics.boundingRect(text_or_widget).width()
-            max_width = 400  # Maximum width for the label
-            width = min(text_width + 20, max_width)
-            label.setFixedWidth(width)
+            padding = 40  # extra space for padding
+            if sender == "user":
+                max_width = 500
+            else:
+                max_width = 1300
+            
+            # Calculate the desired width including padding.
+            desired_width = text_width + padding
 
-            # Apply styling based on sender and interface mode
+            # If the desired width is less than the maximum, fix the width to that.
+            # Otherwise, allow the label to use the maximum width so that text wraps.
+            if desired_width < max_width:
+                label.setFixedWidth(desired_width)
+            else:
+                label.setMaximumWidth(max_width)
+            
+            # Apply styling based on sender and interface mode.
             if self.interface_mode == "DARK":
                 user_color = "#228B22"
-                model_color = "#191970"
+                # model_color = "#191970"
+                model_color = "#121212"
             else:
                 user_color = "#adf0ad"
-                model_color = "#99b2f0"
+                # model_color = "#99b2f0"
+                model_color = "white"
 
             if sender == "user":
                 label.setStyleSheet(f"background-color: {user_color}; border-radius: 10px; padding: 10px;")
@@ -342,14 +364,16 @@ class MainWindow(QMainWindow):
             else:
                 label.setStyleSheet(f"background-color: {model_color}; border-radius: 10px; padding: 10px;")
                 alignment = Qt.AlignLeft
+
+            label.adjustSize()
+            label.setFixedHeight(label.sizeHint().height())
         else:
             # If a widget is passed in, assume it's a QLabel or similar.
             label = text_or_widget
-            # Make sure the sender property is set even in this branch.
             label.setProperty("sender", sender)
-            alignment = Qt.AlignLeft  # or set differently if needed
+            alignment = Qt.AlignLeft
 
-        # Create a container for alignment
+        # Create a container widget for alignment and add the label.
         container = QWidget()
         layout = QHBoxLayout(container)
         layout.addWidget(label)
@@ -357,15 +381,14 @@ class MainWindow(QMainWindow):
         layout.setContentsMargins(0, 0, 0, 10)
         self.chatLayout.addWidget(container)
 
-        # Adjust the sizes
+        # Adjust sizes if needed.
         container.adjustSize()
         label.adjustSize()
 
     def save_current_chat_session(self):
         """Save the current chat session to a JSON file with sender information,
         but only if the chat space is not empty."""
-        chat_history_dir = os.path.join(os.getcwd(), "chat_histories")
-        os.makedirs(chat_history_dir, exist_ok=True)
+        os.makedirs(self.chat_history_dir, exist_ok=True)
 
         session_data = []
         for i in range(self.chatLayout.count()):
@@ -387,7 +410,7 @@ class MainWindow(QMainWindow):
             session_path = self.current_session_file
         else:
             session_name = f"chat_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-            session_path = os.path.join(chat_history_dir, session_name)
+            session_path = os.path.join(self.chat_history_dir, session_name)
             self.current_session_file = session_path
 
         try:
@@ -401,18 +424,18 @@ class MainWindow(QMainWindow):
             if session_file_name not in existing_items:
                 file_name, ext = os.path.splitext(session_file_name)
                 self.chatHistoryList.addItem(file_name)
-                
+
         except Exception as e:
             logging.error(f"Error saving chat session: {e}")
             QMessageBox.critical(self, "Save Error", f"Could not save chat session:\n{str(e)}")
 
     def load_existing_chat_sessions(self):
         """Load saved chat sessions into the chat history list."""
-        chat_history_dir = os.path.join(os.getcwd(), "chat_histories")
-        if not os.path.exists(chat_history_dir):
+        
+        if not os.path.exists(self.chat_history_dir):
             return  # Nothing to load yet
 
-        session_files = sorted(os.listdir(chat_history_dir))  # You can sort as needed
+        session_files = sorted(os.listdir(self.chat_history_dir))  # You can sort as needed
         self.chatHistoryList.clear()
         for session in session_files:
             file_name, ext = os.path.splitext(session)
@@ -465,6 +488,12 @@ class MainWindow(QMainWindow):
         # Optionally prompt the user to save the current session
         self.save_current_chat_session()
         event.accept()
+
+    def open_settings_window(self):
+        """Open the settings window."""
+        logging.debug("Opening Settings Window")
+        self.settings_window = SettingsWindow(parent=self)
+        self.settings_window.exec_()
 
 def load_stylesheet(file_path):
     """Load the stylesheet from a file."""

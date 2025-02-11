@@ -1,18 +1,6 @@
-# Configuration for AI models and tokens
-
-# API token for authentication
-API_TOKEN: ""
-
-# Embedding model to be used
-EMBEDDING_MODEL: "BAAI/bge-small-en-v1.5"
-# EMBEDDING_MODEL: "sentence-transformers/all-MiniLM-L6-v2"
-
-# Language model to be used
-LLM_MODEL: "google/gemma-2-2b-it"
-# Alternative language model
-# LLM_MODEL: "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
-
-CHUNK_SIZE: 512
+API_TOKEN:
 CHUNK_OVERLAP: 10
-
-INTERFACE_MODE: DARK #LIGHT, DARK
+CHUNK_SIZE: 512
+EMBEDDING_MODEL: BAAI/bge-small-en-v1.5
+INTERFACE_MODE: DARK
+LLM_MODEL: google/gemma-2-2b-it

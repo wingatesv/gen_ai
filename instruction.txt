@@ -30,9 +30,9 @@ features:
 	•	Add a search bar in the left panel to filter and locate specific documents easily.
 	2.	Multi-file Upload - done
 	•	Allow users to upload multiple PDFs at once and maintain them in a document collection.
-	3.	RAG-Specific Features - wait
+	3.	RAG-Specific Features - backend
 	•	Include an option to select a retrieval method (e.g., BM25, Vector Search, Hybrid) before querying the documents.
-	4.	Contextual Querying
+	4.	Contextual Querying - backend
 	•	Allow users to choose whether their query should search:
 	•	Single document
 	•	All uploaded documents
@@ -42,7 +42,7 @@ features:
 	•	Concise Answer
 	•	Detailed Explanation
 	•	Cited Source Highlights
-	6.	Export Responses
+	6.	Export Responses - kind of done?
 	•	Provide an option to export chat history or AI-generated answers to PDF or text.
 	7.	Model Settings Panel - now use config.yaml
 	•	Add a settings menu where users can:
