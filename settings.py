@@ -1,7 +1,7 @@
 import os
 import yaml
 import logging
-from PyQt5.QtWidgets import QDialog, QMessageBox
+from PyQt5.QtWidgets import QDialog, QMessageBox, QFileDialog
 from PyQt5.uic import loadUi
 
 
@@ -26,6 +26,8 @@ class SettingsWindow(QDialog):
         self.saveButton.clicked.connect(self.save_settings)
         self.cancelButton.clicked.connect(self.close)
         self.resetButton.clicked.connect(self.reset_settings)
+        self.browseDocumentsButton.clicked.connect(self.browse_dir)
+        self.browseChatHistoryButton.clicked.connect(self.browse_dir)
 
         self.parent = parent
     
@@ -47,6 +49,8 @@ class SettingsWindow(QDialog):
         self.parent.chunk_size = self.chunkSizeInput.value()
         self.parent.chunk_overlap = self.chunkOverlapInput.value()
         self.parent.interface_mode = self.interfaceModeDropdown.currentText().upper()
+        self.parent.internal_folder = self.documentsDirInput.text()
+        self.parent.chat_history_dir = self.chatHistoryDirInput.text()
 
         # Save changes to config.yaml
         self.parent.config.update({
@@ -55,7 +59,9 @@ class SettingsWindow(QDialog):
             "LLM_MODEL": self.parent.llm_model,
             "CHUNK_SIZE": self.parent.chunk_size,
             "CHUNK_OVERLAP": self.parent.chunk_overlap,
-            "INTERFACE_MODE": self.parent.interface_mode
+            "INTERFACE_MODE": self.parent.interface_mode,
+            "DOC_DIR": self.parent.internal_folder,
+            "CHAT_DIR": self.parent.chat_history_dir
         })
         with open("config.yaml", "w") as config_file:
             yaml.dump(self.parent.config, config_file)
@@ -63,3 +69,12 @@ class SettingsWindow(QDialog):
         logging.info("Settings saved and applied.")
         QMessageBox.information(self, "Settings Saved", "The effect will be applied after restarting the application.")
         self.close()
+
+    def browse_dir(self):
+        """Open a file dialog to select a directory."""
+        directory = str(QFileDialog.getExistingDirectory(self, "Select Directory"))
+        if directory:
+            if self.sender() == self.browseDocumentsButton:
+                self.documentsDirInput.setText(directory)
+            elif self.sender() == self.browseChatHistoryButton:
+                self.chatHistoryDirInput.setText(directory)

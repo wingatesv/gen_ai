@@ -58,6 +58,9 @@ class MainWindow(QMainWindow):
         # Load configuration from YAML
         self.config = self.load_config("config.yaml")
 
+        self.internal_folder = self._setup_internal_folder("documents")
+        self.chat_history_dir = os.path.join(os.getcwd(), "chat_histories")
+
         # Configuration
         self.api_token = self.config.get("API_TOKEN", "")
         self.embedding_model = self.config.get("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
@@ -65,6 +68,8 @@ class MainWindow(QMainWindow):
         self.chunk_size = self.config.get("CHUNK_SIZE", 512)
         self.chunk_overlap = self.config.get("CHUNK_OVERLAP", 10)
         self.interface_mode = self.config.get("INTERFACE_MODE", "DARK").upper()
+        self.internal_folder = self.config.get("DOC_DIR", self.internal_folder)
+        self.chat_history_dir = self.config.get("CHAT_DIR", self.chat_history_dir)
 
         # Initialize RAG
         logging.debug("Initializing RAG")
@@ -90,13 +95,13 @@ class MainWindow(QMainWindow):
         self.leftPanel.dropEvent = self.dropEvent
 
         # Internal state
-        self.internal_folder = self._setup_internal_folder("documents")
+       
         self.uploaded_files = []
         self.update_document_list()
 
         # Chat management panel
         self.current_session_file = None  # Track the currently loaded/saved chat session file
-        self.chat_history_dir = os.path.join(os.getcwd(), "chat_histories")
+        
         self.chatHistoryList.itemClicked.connect(self.load_chat_session)
         self.load_existing_chat_sessions()
 
@@ -105,6 +110,9 @@ class MainWindow(QMainWindow):
 
         # Connect the settings button
         self.settingsButton.clicked.connect(self.open_settings_window)
+
+        # connect search bar to filter function
+        self.searchBar.textChanged.connect(self.filter_lists)
 
     @staticmethod
     def load_config(config_path):
@@ -271,7 +279,7 @@ class MainWindow(QMainWindow):
             self.dot_label.setStyleSheet("background-color: #121212; border-radius: 10px; padding: 10px;")
         else:
             self.dot_label.setStyleSheet("background-color: white; border-radius: 10px; padding: 10px;")
-            
+
         self.add_message(self.dot_label, sender="model")
 
         self.dot_timer = QTimer(self)
@@ -386,8 +394,7 @@ class MainWindow(QMainWindow):
         label.adjustSize()
 
     def save_current_chat_session(self):
-        """Save the current chat session to a JSON file with sender information,
-        but only if the chat space is not empty."""
+        """Save the current chat session to a JSON file with sender information, but only if the chat space is not empty."""
         os.makedirs(self.chat_history_dir, exist_ok=True)
 
         session_data = []
@@ -418,12 +425,14 @@ class MainWindow(QMainWindow):
                 json.dump(session_data, file, indent=2)
             logging.info(f"Chat session saved as {session_path}")
             
-            # Optionally, if the session is new, add it to the chat history list.
+            # ✅ **Prevent duplicate chat history entries**
             session_file_name = os.path.basename(session_path)
+            session_base_name, _ = os.path.splitext(session_file_name)
+
+            # Check if it already exists in the chat history list
             existing_items = [self.chatHistoryList.item(i).text() for i in range(self.chatHistoryList.count())]
-            if session_file_name not in existing_items:
-                file_name, ext = os.path.splitext(session_file_name)
-                self.chatHistoryList.addItem(file_name)
+            if session_base_name not in existing_items:
+                self.chatHistoryList.addItem(session_base_name)
 
         except Exception as e:
             logging.error(f"Error saving chat session: {e}")
@@ -442,11 +451,10 @@ class MainWindow(QMainWindow):
             self.chatHistoryList.addItem(file_name)
 
     def load_chat_session(self, item):
-        """Load a selected chat session from a JSON file into the chat layout."""
-        session_name = item.text()
-        session_name = session_name + ".json"
-        chat_history_dir = os.path.join(os.getcwd(), "chat_histories")
-        session_path = os.path.join(chat_history_dir, session_name)
+        """Load a selected chat session from a JSON file into the chat layout and scroll to the bottom."""
+        session_name = item.text() + ".json"
+        session_path = os.path.join(self.chat_history_dir, session_name)
+
         try:
             with open(session_path, "r", encoding="utf-8") as file:
                 session_data = json.load(file)
@@ -458,7 +466,10 @@ class MainWindow(QMainWindow):
                 sender = entry.get("sender", "model")
                 message_text = entry.get("message", "")
                 self.add_message(message_text, sender=sender)
-            
+
+            # ✅ Scroll to the bottom after loading messages
+            QTimer.singleShot(100, self.scroll_to_bottom)
+
             # Set the current session file so new messages are saved to the same file.
             self.current_session_file = session_path
 
@@ -475,14 +486,19 @@ class MainWindow(QMainWindow):
                 widget.deleteLater()
                 
     def new_chat_session(self):
-        """Create a new chat session if the chat space is populated; do nothing if empty."""
+        """Prompt the user before starting a new chat session to avoid accidental overwrites."""
         if self.chatLayout.count() > 0:
-            logging.info("Chat space populated. Saving current session and creating a new chat session.")
-            self.save_current_chat_session()  # Save the current session first.
-            self.clear_chat_layout()            # Clear the chat area.
-            self.current_session_file = None    # Reset so new messages start a new session.
-        else:
-            logging.info("Chat space is empty. No new session created.")
+            reply = QMessageBox.question(
+                self, "Save Chat", 
+                "Do you want to save the current chat before starting a new session?",
+                QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes
+            )
+            if reply == QMessageBox.Yes:
+                self.save_current_chat_session()
+
+        self.current_session_file = None  # ✅ Ensure new chat session starts fresh
+        logging.info("Starting a new chat session.")
+        self.clear_chat_layout()
 
     def closeEvent(self, event):
         # Optionally prompt the user to save the current session
@@ -494,6 +510,25 @@ class MainWindow(QMainWindow):
         logging.debug("Opening Settings Window")
         self.settings_window = SettingsWindow(parent=self)
         self.settings_window.exec_()
+
+    def filter_lists(self):
+        """Filter the documentList and chatHistoryList based on searchBar input."""
+        search_text = self.searchBar.text().strip().lower()
+
+        # Filter document list
+        for index in range(self.documentList.count()):
+            item = self.documentList.item(index)
+            item.setHidden(search_text not in item.text().lower())
+
+        # Filter chat history list
+        for index in range(self.chatHistoryList.count()):
+            item = self.chatHistoryList.item(index)
+            item.setHidden(search_text not in item.text().lower())
+
+    def scroll_to_bottom(self):
+        """Ensure the chat scroll area always scrolls to the latest message."""
+        scrollbar = self.chatScrollArea.verticalScrollBar()
+        scrollbar.setValue(scrollbar.maximum())
 
 def load_stylesheet(file_path):
     """Load the stylesheet from a file."""
