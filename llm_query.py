@@ -20,9 +20,11 @@ chroma_client = None
 vector_store = None
 index = None
 
-def initialize_rag(api_token, embedding_model, llm_model, chunk_size, chunk_overlap):
+def initialize_rag(api_token, embedding_model, llm_model, chunk_size, chunk_overlap, role):
     """Initialize and update the RAG database (ChromaDB) with new documents."""
     global chroma_client, vector_store, index
+
+    role = role
 
     # Initialize ChromaDB client
     chroma_client = chromadb.PersistentClient(DB_PATH)  # Persistent storage
@@ -82,12 +84,12 @@ def initialize_rag(api_token, embedding_model, llm_model, chunk_size, chunk_over
     else:
         logger.info("No new documents detected. Skipping update.")
 
-def hugging_face_query(prompt):
+def hugging_face_query(prompt, role):
     """Query the preloaded RAG index instead of rebuilding it."""
     global index
     if index is None:
         return "Error: Index has not been initialized. Call initialize_rag() first."
-
+    role = role
     query_engine = index.as_query_engine()
     response = query_engine.query(prompt)
     return response.response  # Ensure we return only the text response

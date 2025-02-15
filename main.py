@@ -26,13 +26,14 @@ class RAGWorker(QThread):
     finished = pyqtSignal()
     error = pyqtSignal(str)
 
-    def __init__(self, api_token, embedding_model, llm_model, chunk_size, chunk_overlap):
+    def __init__(self, api_token, embedding_model, llm_model, chunk_size, chunk_overlap, role):
         super().__init__()
         self.api_token = api_token
         self.embedding_model = embedding_model
         self.llm_model = llm_model
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
+        self.role = role
 
     def run(self):
         try:
@@ -41,7 +42,8 @@ class RAGWorker(QThread):
                 embedding_model=self.embedding_model,
                 llm_model=self.llm_model,
                 chunk_size=self.chunk_size,
-                chunk_overlap=self.chunk_overlap
+                chunk_overlap=self.chunk_overlap,
+                role = self.role
             )
             self.finished.emit()
         except Exception as e:
@@ -54,6 +56,10 @@ class MainWindow(QMainWindow):
         logging.debug("Initializing MainWindow")
         super().__init__()
         loadUi("resources/interface.ui", self)
+
+        # Connect the roleDropdown signal
+        self.roleDropdown.currentIndexChanged.connect(self.on_role_change)
+        self.role = self.roleDropdown.currentText()
 
         # Load configuration from YAML
         self.config = self.load_config("config.yaml")
@@ -78,7 +84,8 @@ class MainWindow(QMainWindow):
             embedding_model=self.embedding_model,
             llm_model=self.llm_model,
             chunk_size=self.chunk_size,
-            chunk_overlap=self.chunk_overlap
+            chunk_overlap=self.chunk_overlap,
+            role=self.role
         )
 
         # Signals and UI setup
@@ -95,7 +102,6 @@ class MainWindow(QMainWindow):
         self.leftPanel.dropEvent = self.dropEvent
 
         # Internal state
-       
         self.uploaded_files = []
         self.update_document_list()
 
@@ -111,7 +117,7 @@ class MainWindow(QMainWindow):
         # Connect the settings button
         self.settingsButton.clicked.connect(self.open_settings_window)
 
-        # connect search bar to filter function
+        # Connect search bar to filter function
         self.searchBar.textChanged.connect(self.filter_lists)
 
     @staticmethod
@@ -144,7 +150,7 @@ class MainWindow(QMainWindow):
         logging.debug("Updating document list")
         self.documentList.clear()
         self.uploaded_files = [
-            file for file in os.listdir(self.internal_folder) if file.endswith((".pdf", ".docx", ".txt", ".csv", ".json"))
+            file for file in os.listdir(self.internal_folder) if file.endswith((".pdf", ".docx", ".txt", ".csv", ".json", ".pptx"))
         ]
         self.documentList.addItems(self.uploaded_files)
 
@@ -175,7 +181,7 @@ class MainWindow(QMainWindow):
         """Handle file upload and update the RAG database."""
         logging.debug("Uploading documents")
         files, _ = QFileDialog.getOpenFileNames(
-            self, "Select Documents", "", "Documents (*.pdf *.docx *.txt *.csv *.json)"
+            self, "Select Documents", "", "Documents (*.pdf *.docx *.txt *.csv *.json, *.pptx)"
         )
         if not files:
             logging.debug("No files selected for upload")
@@ -314,8 +320,7 @@ class MainWindow(QMainWindow):
         self.show_dot_animation()
 
         def query_llm():
-            return str(hugging_face_query(user_input))
-            # return user_input
+            return str(hugging_face_query(user_input, self.role))
 
         executor = ThreadPoolExecutor(max_workers=1)
         future = executor.submit(query_llm)
@@ -359,11 +364,9 @@ class MainWindow(QMainWindow):
             # Apply styling based on sender and interface mode.
             if self.interface_mode == "DARK":
                 user_color = "#228B22"
-                # model_color = "#191970"
                 model_color = "#121212"
             else:
                 user_color = "#adf0ad"
-                # model_color = "#99b2f0"
                 model_color = "white"
 
             if sender == "user":
@@ -425,7 +428,7 @@ class MainWindow(QMainWindow):
                 json.dump(session_data, file, indent=2)
             logging.info(f"Chat session saved as {session_path}")
             
-            # ✅ **Prevent duplicate chat history entries**
+            # Prevent duplicate chat history entries
             session_file_name = os.path.basename(session_path)
             session_base_name, _ = os.path.splitext(session_file_name)
 
@@ -440,7 +443,6 @@ class MainWindow(QMainWindow):
 
     def load_existing_chat_sessions(self):
         """Load saved chat sessions into the chat history list."""
-        
         if not os.path.exists(self.chat_history_dir):
             return  # Nothing to load yet
 
@@ -467,7 +469,7 @@ class MainWindow(QMainWindow):
                 message_text = entry.get("message", "")
                 self.add_message(message_text, sender=sender)
 
-            # ✅ Scroll to the bottom after loading messages
+            # Scroll to the bottom after loading messages
             QTimer.singleShot(100, self.scroll_to_bottom)
 
             # Set the current session file so new messages are saved to the same file.
@@ -496,7 +498,7 @@ class MainWindow(QMainWindow):
             if reply == QMessageBox.Yes:
                 self.save_current_chat_session()
 
-        self.current_session_file = None  # ✅ Ensure new chat session starts fresh
+        self.current_session_file = None  # Ensure new chat session starts fresh
         logging.info("Starting a new chat session.")
         self.clear_chat_layout()
 
@@ -529,6 +531,38 @@ class MainWindow(QMainWindow):
         """Ensure the chat scroll area always scrolls to the latest message."""
         scrollbar = self.chatScrollArea.verticalScrollBar()
         scrollbar.setValue(scrollbar.maximum())
+
+    def on_role_change(self, index):
+        """Handle changes in the role dropdown and disable document uploads when role is Teacher."""
+        self.role = self.roleDropdown.currentText()
+        # Notify the user about the role change
+        QMessageBox.information(self, "Role Changed", f"Now the LLM model is in {self.role} mode")
+        logging.info(f"Role switched to: {self.role}")
+        
+        # Reinitialize RAG with current settings
+        try:
+            initialize_rag(
+                api_token=self.api_token,
+                embedding_model=self.embedding_model,
+                llm_model=self.llm_model,
+                chunk_size=self.chunk_size,
+                chunk_overlap=self.chunk_overlap,
+                role=self.role
+            )
+            logging.info("RAG reinitialized successfully after role change")
+        except Exception as e:
+            logging.error(f"Error reinitializing RAG: {e}")
+            QMessageBox.critical(self, "RAG Error", f"Error reinitializing RAG:\n{str(e)}")
+        
+        # Disable or enable document uploads based on the role
+        if self.role == "Teacher":
+            self.uploadButton.setEnabled(False)
+            self.leftPanel.setAcceptDrops(False)
+            logging.info("Document upload disabled for Teacher role")
+        else:
+            self.uploadButton.setEnabled(True)
+            self.leftPanel.setAcceptDrops(True)
+            logging.info("Document upload enabled for Student role")
 
 def load_stylesheet(file_path):
     """Load the stylesheet from a file."""

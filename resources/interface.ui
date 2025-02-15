@@ -79,8 +79,32 @@
       <widget class="QWidget" name="rightPanelContainer">
        <layout class="QVBoxLayout" name="rightPanelContainerLayout">
         <item>
-         <!-- Settings Button -->
+         <!-- Role & Settings Component -->
          <layout class="QHBoxLayout" name="settingsButtonLayout">
+          <item>
+           <widget class="QLabel" name="roleLabel">
+            <property name="text">
+             <string>Role</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="roleDropdown">
+                <property name="minimumWidth">
+            <number>130</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>Teacher</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Student</string>
+             </property>
+            </item>
+           </widget>
+          </item>
           <item>
            <spacer name="spacerLeft">
             <property name="orientation">
